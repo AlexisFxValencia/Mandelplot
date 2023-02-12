@@ -50,7 +50,7 @@ void Mandelbrot::parse_params(int argc, char *argv[]){
           case 'h':
             cout << endl;
             printf("-s: Size of the image in pixels (defines the width and the height of the image as it is a square). \n");
-            printf("-p: Maximum number of iterations of the mandelbrot process. \n");
+            printf("-i: Maximum number of iterations of the mandelbrot process. \n");
             printf("-x: x-coordinate of the view's center. Default parameter is %f \n", center.x);
             printf("-y: y-coordinate of the view's center. Default parameter is %f \n", center.y);            
             printf("-w: width of the view. Default parameter is %f \n", width);
