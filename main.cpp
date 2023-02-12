@@ -18,8 +18,11 @@ int main(int argc, char *argv[])
   EasyBMP::Image img(mdlb.N_pixels, mdlb.N_pixels, img_name, white);
   cout << "Mandelbrot generation's name : " << img_name << endl;
   
-
-  for (int y = 0; y < mdlb.N_pixels; ++y) {
+  int y;
+#pragma omp parallel shared(img) private(y)
+{
+  #pragma omp for
+  for (y = 0; y < mdlb.N_pixels; ++y) { 
     for (int x = 0; x < mdlb.N_pixels; ++x) {
       float x_normalized = ((float)x/(float)mdlb.N_pixels)*mdlb.width + mdlb.center.x - mdlb.width/2;
       float y_normalized = ((float)(mdlb.N_pixels-y)/(float)mdlb.N_pixels)*mdlb.width + mdlb.center.y - mdlb.width/2;
@@ -34,6 +37,8 @@ int main(int argc, char *argv[])
       }      
     }
   }
+}
+
   img.Write();
   double t_end = omp_get_wtime();
   printf("image generated in %f seconds.\n", t_end - t_start); 
