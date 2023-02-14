@@ -16,5 +16,5 @@ i : number of iterations according to the Mandelbrot algorithm.
 
 
 ## INTERESTING POINTS
-./mandelbrot -x -0.749 -y 0.1 -w 0.005
+./mandelbrot -x -0.749 -y 0.1 -w 0.005 </br>
 ![mandelbrot_512_100](https://user-images.githubusercontent.com/84465552/218671610-0fd697e4-6fac-4dcf-ac8b-2e358a9e9307.jpg)
