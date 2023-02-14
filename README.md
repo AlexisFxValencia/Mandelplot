@@ -5,7 +5,7 @@ a C++ command line program to generate mandelbrot images.
 
 ## HOW TO COMPILE IT :
 g++ used to compile it like this :   </br>
-g++ -fopenmp -o mandelbrot *.cpp  </br>
+g++ -fopenmp -o mandelplot *.cpp  </br>
 -fopenmp option is used to parallelize it with openmp.
 
 ## HOW USE IT (for now only in LINUX) :
@@ -13,6 +13,8 @@ a typical command : </br>
 ./mandelplot -s 1024 -i 50 </br>
 s : for the size in pixel of the width and height of the generated image. </br>
 i : number of iterations according to the Mandelbrot algorithm.
+
+please use ./mandelplot -h to get help.
 
 
 ## INTERESTING POINTS
