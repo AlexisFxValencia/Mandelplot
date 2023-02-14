@@ -8,9 +8,13 @@ g++ used to compile it like this :   </br>
 g++ -fopenmp -o mandelbrot *.cpp  </br>
 -fopenmp option is used to parallelize it with openmp.
 
-## HOW USE IT :
+## HOW USE IT (for now only in LINUX) :
 a typical command : </br>
 ./mandelplot -s 1024 -i 50 </br>
-s : for the size in pixel of the width and height of the enerated image. </br>
+s : for the size in pixel of the width and height of the generated image. </br>
 i : number of iterations according to the Mandelbrot algorithm.
 
+
+## INTERESTING POINTS
+./mandelbrot -x -0.749 -y 0.1 -w 0.005
+![mandelbrot_512_100](https://user-images.githubusercontent.com/84465552/218671610-0fd697e4-6fac-4dcf-ac8b-2e358a9e9307.jpg)
